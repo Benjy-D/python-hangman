@@ -5,19 +5,19 @@ To create the game Hangman in the programming language python. First it will sta
 
 ## Requirements for the Project
 
--[x] Basic functionality
--[ ] Cleaner interface
--[x] More features
--[ ] Clean up code
+- [x] Basic functionality
+- [ ] Cleaner interface
+- [x] More features
+- [ ] Clean up code
 #### Basic GUI
--[ ] Layout
--[ ] Artwork
--[ ] Functionality
--[ ] Clean up code
+- [ ] Layout
+- [ ] Artwork
+- [ ] Functionality
+- [ ] Clean up code
 #### Advanced GUI
--[ ] Menu
--[ ] Extra functionality
--[ ] Clean up code
+- [ ] Menu
+- [ ] Extra functionality
+- [ ] Clean up code
 ### I know.. It's not the best
 
 I'm sire that there are plenty of ways in which I could optimise this code for faster perfomance and less ilnes of code but since I am not a python expert I'm not quite sure if I'd be able to do this!

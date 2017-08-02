@@ -4,7 +4,7 @@
 To create the game Hangman in the programming language python. First it will start off very basic with the only interaction being text-based. Then to add more features and then make it more user-friendly. Afterwards, the aim is to create a fully functional and working GUI using the module Tkinter.
 
 ## Requirements for the Project
-
+#### Text-based
 - [x] Basic functionality
 - [ ] Cleaner interface
 - [x] More features
@@ -20,4 +20,4 @@ To create the game Hangman in the programming language python. First it will sta
 - [ ] Clean up code
 ### I know.. It's not the best
 
-I'm sire that there are plenty of ways in which I could optimise this code for faster perfomance and less ilnes of code but since I am not a python expert I'm not quite sure if I'd be able to do this!
+I know this isn't the neatest and most efficient way of doing this so I'm open to suggestions of any ways in which I can improve this code!

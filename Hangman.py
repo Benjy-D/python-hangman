@@ -9,13 +9,9 @@ MEDIUM_WORDS_LIST = []
 HARD_WORDS_LIST = []
 
 Gallows = 0
-
 pickedWordList = []
-
 invertedDisplayWord = []
-
 displayWord = []
-
 alreadyGuessed = []
 
 LOGO = '''
@@ -143,6 +139,7 @@ HANGMAN_NOOSE = ['''
 ========='''
                  ]
 
+
 def InitialiseLists():
     with open(EASY_WORDS_DIR, 'r') as EASY_WORDS:
         for line in EASY_WORDS:
@@ -156,16 +153,13 @@ def InitialiseLists():
 
 
 def CheckGuess(guess):
-    global displayWord
-    global chosenWord
-    global Gallows
+    global displayWord, chosenWord, Gallows
     while guess in invertedDisplayWord:
-            index = invertedDisplayWord.index(guess)
-            invertedDisplayWord.pop(index)
-            invertedDisplayWord.insert(index, '_')
-            displayWord = displayWord[:index] + displayWord[index+1:]
-            displayWord.insert(index, guess)
-
+        index = invertedDisplayWord.index(guess)
+        invertedDisplayWord.pop(index)
+        invertedDisplayWord.insert(index, '_')
+        displayWord = displayWord[:index] + displayWord[index + 1:]
+        displayWord.insert(index, guess)
     if guess not in chosenWord:
         alreadyGuessed.append(guess)
         print('\n\t\tIncorrect Guess\n')
@@ -182,7 +176,6 @@ def WordPicker(gamestyle):
     elif gamestyle == 'HARD':
         pickedWord = random.choice(HARD_WORDS_LIST)
     elif gamestyle == 'CUSTOM_WORD':
-
         pickedWord = input('\nPlease enter a word. It cannot contain spaces, special characters or numbers: ')
         while not all(x.isalpha() for x in pickedWord):
             pickedWord = input(
@@ -235,7 +228,6 @@ def main():
     print(
         '\n\nPlease choose an option from the list: \n\n1 – Get an easy word \n2 – Get a medium word \n3 – Get a hard word \n4 – Enter in your own word\n')
     while not validChoice:
-        # try:
         Choice = input()
         if Choice == '1':
             chosenWord = WordPicker('EASY')
@@ -251,9 +243,7 @@ def main():
             validChoice = True
         else:
             print('Please enter a valid choice:\n')
-            # except:
-            # print('Sorry, an error occured. Restarting main loop...')
-            # Main()
+
     while displayWord != chosenWord:
         if Gallows != 10:
             print(' '.join(alreadyGuessed))
@@ -263,13 +253,13 @@ def main():
             CheckGuess(guess)
         else:
             print(GAME_OVER)
-            print('\n\nYou lost :(\n\nThe word was ', ''.join(chosenWord),'\n\nBetter luck next time!')
+            print('\n\nYou lost :(\n\nThe word was ', ''.join(chosenWord), '\n\nBetter luck next time!')
             break
-
     if displayWord == chosenWord:
         print(WELL_DONE)
-        print('\n\nYou won!\n\nThe word was ', ''.join(chosenWord),'\n You lost ',Gallows,' Lives')
+        print('\n\nYou won!\n\nThe word was ', ''.join(chosenWord), '\n You lost ', Gallows, ' Lives')
         print('\nThank you for playing!')
+
 
 InitialiseLists()
 main()

@@ -263,19 +263,13 @@ def main():
             CheckGuess(guess)
         else:
             print(GAME_OVER)
-            print(chosenWord)
+            print('\n\nYou lost :(\n\nThe word was ', ''.join(chosenWord),'\n\nBetter luck next time!')
             break
 
     if displayWord == chosenWord:
         print(WELL_DONE)
-        print('\n\nThe word was ',chosenWord,'\n You lost ',Gallows,' Lives')
+        print('\n\nYou won!\n\nThe word was ', ''.join(chosenWord),'\n You lost ',Gallows,' Lives')
+        print('\nThank you for playing!')
 
 InitialiseLists()
 main()
-# WordIn = displayWord
-
-# Found = Guessed Letters - both correct and wrong
-
-# Check = Picked word but correct guessed letters are replaced with underscores - should be safe to remove
-
-# Won = Picked word as list - never changes

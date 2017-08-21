@@ -6,7 +6,7 @@ To create the game Hangman in the programming language python. First it will sta
 ## Requirements for the Project
 #### Text-based
 - [x] Basic functionality
-- [ ] Cleaner interface
+- [x] Cleaner interface
 - [x] More features
 - [ ] Clean up code
 #### Basic GUI
